@@ -1,0 +1,20 @@
+<h1>Add new restaurant</h1>
+
+<!-- <form action="/restaurants" method="post">
+  <%#= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name" placeholder="name">
+  <input type="text" name="category" placeholder="category">
+  <input type="text" name="address" placeholder="address">
+  <input type="text" name="phone_number" placeholder="phone number">
+  <input type="submit">
+</form>
+ -->
+
+<%= form_for(@restaurant) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.text_field :category %>
+  <%= f.text_field :address %>
+  <%= f.text_field :phone_number %>
+  <%= f.submit %>
+<% end %>
